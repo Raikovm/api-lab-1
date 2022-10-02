@@ -6,7 +6,7 @@ import { z } from "zod";
  * This way you can ensure the app isn't built with invalid env vars.
  */
 export const serverSchema = z.object({
-  // SERVERVAR: z.string(),
+  WEATHERBIT_API_KEY: z.string(),
 });
 
 /**
