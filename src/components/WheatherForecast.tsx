@@ -13,18 +13,12 @@ export const WeatherForecast = ({city}: WeatherForecastProps) =>
     const result = trpc.useQuery(['weather.Forecast', { cityName: city}]);
 
     useEffect(() => {
-        console.log(result.isError);
-
         setShowErrorMessage(result.isError);
         if (result.isError) {
             setError(result.error.message);
             return;
-        }
-        
-
-
-    }, [result]);
-    
+        }      
+    }, [result]);    
 
     return <>
     {
